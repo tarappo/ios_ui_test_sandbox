@@ -6,7 +6,10 @@ jobs:
   build:
 
     runs-on: macos-10.15
-
+    strategy:
+      matrix:
+        xcode: [ '11', '11.3.1' ]
+        os: [ macos-10.15 ]
     steps:
     - uses: actions/checkout@v2
     - name: Cache bundle directory
@@ -20,5 +23,5 @@ jobs:
       run: |
         bundle config path vendor/bundle
         bundle install --jobs 4 --retry 3
-    - name: run test
-      run: DEVELOPER_DIR='/Applications/Xcode_11.app/Contents/Developer' bundle exec fastlane test
+    - name: run test with ${{ matrix.xcode }}
+      run: DEVELOPER_DIR='/Applications/Xcode_${{{ matrix.xcode }}.app/Contents/Developer' bundle exec fastlane test
