@@ -18,7 +18,6 @@ jobs:
             ${{ runner.os }}-gem-
     - name: bundler
       run: |
-        gem install bundler
         bundle config path vendor/bundle
         bundle install --jobs 4 --retry 3
     - name: run test
