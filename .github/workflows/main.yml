@@ -24,4 +24,4 @@ jobs:
         bundle config path vendor/bundle
         bundle install --jobs 4 --retry 3
     - name: run test with ${{ matrix.xcode }}
-      run: DEVELOPER_DIR='/Applications/Xcode_${{{ matrix.xcode }}.app/Contents/Developer' bundle exec fastlane test
+      run: DEVELOPER_DIR='/Applications/Xcode_${{ matrix.xcode }}.app/Contents/Developer' bundle exec fastlane test
