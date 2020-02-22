@@ -13,7 +13,7 @@
 		7D405F8423FD2B0A0049E641 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D405F8223FD2B0A0049E641 /* Main.storyboard */; };
 		7D405F8623FD2B0C0049E641 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D405F8523FD2B0C0049E641 /* Assets.xcassets */; };
 		7D405F8923FD2B0C0049E641 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D405F8723FD2B0C0049E641 /* LaunchScreen.storyboard */; };
-		7D405F9423FD2B0C0049E641 /* uitest_sampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D405F9323FD2B0C0049E641 /* uitest_sampleUITests.swift */; };
+		7D405F9423FD2B0C0049E641 /* queryUITest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D405F9323FD2B0C0049E641 /* queryUITest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +36,7 @@
 		7D405F8823FD2B0C0049E641 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7D405F8A23FD2B0C0049E641 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D405F8F23FD2B0C0049E641 /* uitest-sampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "uitest-sampleUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		7D405F9323FD2B0C0049E641 /* uitest_sampleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = uitest_sampleUITests.swift; sourceTree = "<group>"; };
+		7D405F9323FD2B0C0049E641 /* queryUITest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = queryUITest.swift; sourceTree = "<group>"; };
 		7D405F9523FD2B0C0049E641 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,7 +93,7 @@
 		7D405F9223FD2B0C0049E641 /* uitest-sampleUITests */ = {
 			isa = PBXGroup;
 			children = (
-				7D405F9323FD2B0C0049E641 /* uitest_sampleUITests.swift */,
+				7D405F9323FD2B0C0049E641 /* queryUITest.swift */,
 				7D405F9523FD2B0C0049E641 /* Info.plist */,
 			);
 			path = "uitest-sampleUITests";
@@ -210,7 +210,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D405F9423FD2B0C0049E641 /* uitest_sampleUITests.swift in Sources */,
+				7D405F9423FD2B0C0049E641 /* queryUITest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
