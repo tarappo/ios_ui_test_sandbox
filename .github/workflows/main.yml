@@ -5,10 +5,10 @@ on: [push]
 jobs:
   build:
 
-    runs-on: macos-10.15
+    runs-on: macos-latest
     strategy:
       matrix:
-        xcode: [ '11.2.1', '11.3.1', '11.4' ]
+        xcode: [ '11.2.1', '11.3.1', 'latest' ]
         os: [ macos-10.15 ]
     steps:
     - uses: actions/checkout@v2
@@ -24,4 +24,15 @@ jobs:
         bundle config path vendor/bundle
         bundle install --jobs 4 --retry 3
     - name: run test with ${{ matrix.xcode }}
-      run: DEVELOPER_DIR='/Applications/Xcode_${{ matrix.xcode }}.app/Contents/Developer' bundle exec fastlane test
+      if: ${{ matrix.xcode }} == 'latest'
+      run: |
+        if [ "${{ matrix.xcode }}" = 'latest' ]; then
+          export XCODE_VERSION=`ls /Applications/ | grep Xcode_ | sort -n | tail -1`
+        else
+          export XCODE_VERSION="${{ matrix.xcode }}"
+        fi
+        echo "::set-env name=XCODE_VERSION::${XCODE_VERSION}"
+  run: echo "$GITHUB_CONTEXT"
+    - name: run test with ${XCODE_VERSION}
+      run: DEVELOPER_DIR='/Applications/Xcode_${{ XCODE_VERSION }}.app/Contents/Developer' bundle exec fastlane test
+    }
