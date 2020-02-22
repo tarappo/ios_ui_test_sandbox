@@ -31,5 +31,5 @@ jobs:
           export XCODE_APP="Xcode_${{ matrix.xcode }}.app"
         fi
         echo "::set-env name=XCODE_VERSION::${XCODE_APP}"
-    - name: run test with ${XCODE_VERSION}
-      run: DEVELOPER_DIR='/Applications/${XCODE_VERSION}/Contents/Developer' bundle exec fastlane test
+    - name: run test with "${XCODE_VERSION}"
+      run: DEVELOPER_DIR="/Applications/${XCODE_VERSION}/Contents/Developer" bundle exec fastlane test
