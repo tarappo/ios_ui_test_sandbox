@@ -32,7 +32,5 @@ jobs:
           export XCODE_VERSION="${{ matrix.xcode }}"
         fi
         echo "::set-env name=XCODE_VERSION::${XCODE_VERSION}"
-  run: echo "$GITHUB_CONTEXT"
     - name: run test with ${XCODE_VERSION}
       run: DEVELOPER_DIR='/Applications/Xcode_${{ XCODE_VERSION }}.app/Contents/Developer' bundle exec fastlane test
-    }
