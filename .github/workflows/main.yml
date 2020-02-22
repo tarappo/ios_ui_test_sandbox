@@ -26,10 +26,10 @@ jobs:
     - name: set Xcode Version ${{ matrix.xcode }}
       run: |
         if [ "${{ matrix.xcode }}" = 'latest' ]; then
-          export XCODE_VERSION=`ls /Applications/ | grep Xcode_ | sort -n | tail -1`
+          export XCODE_APP=`ls /Applications/ | grep Xcode_ | sort -n | tail -1`
         else
-          export XCODE_VERSION="${{ matrix.xcode }}"
+          export XCODE_APP="Xcode_${{ matrix.xcode }}.app"
         fi
-        echo "::set-env name=XCODE_VERSION::${XCODE_VERSION}"
+        echo "::set-env name=XCODE_VERSION::${XCODE_APP}"
     - name: run test with ${XCODE_VERSION}
-      run: DEVELOPER_DIR='/Applications/Xcode_${XCODE_VERSION}.app/Contents/Developer' bundle exec fastlane test
+      run: DEVELOPER_DIR='/Applications/${XCODE_VERSION}/Contents/Developer' bundle exec fastlane test
