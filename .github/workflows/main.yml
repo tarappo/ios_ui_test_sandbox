@@ -23,8 +23,7 @@ jobs:
       run: |
         bundle config path vendor/bundle
         bundle install --jobs 4 --retry 3
-    - name: run test with ${{ matrix.xcode }}
-      if: ${{ matrix.xcode }} == 'latest'
+    - name: set Xcode Version ${{ matrix.xcode }}
       run: |
         if [ "${{ matrix.xcode }}" = 'latest' ]; then
           export XCODE_VERSION=`ls /Applications/ | grep Xcode_ | sort -n | tail -1`
