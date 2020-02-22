@@ -12,9 +12,12 @@ import XCTest
 // 実際のUIテストの実装パターンとは異なる点に注意してください
 class queryUITest: XCTestCase {
     let app = XCUIApplication()
-    let labelCount = 3
+    let labelCount = 4
     let buttonCount = 2
-
+    let switchCount = 1
+    let sliderCount = 1
+    let textFieldCount = 1
+    
     override func setUp() {
         continueAfterFailure = false
         app.launch()
@@ -32,4 +35,17 @@ class queryUITest: XCTestCase {
     func testButtonCount() {
         XCTAssertEqual(buttonCount, app.buttons.count)
     }
+    
+    func testSwitchCount() {
+        XCTAssertEqual(switchCount, app.switches.count)
+    }
+    
+    func testSliderCount() {
+        XCTAssertEqual(sliderCount, app.sliders.count)
+    }
+    
+    func testTextFieldCount() {
+        XCTAssertEqual(textFieldCount, app.textFields.count)
+    }
+        
 }
