@@ -32,4 +32,4 @@ jobs:
         fi
         echo "::set-env name=XCODE_VERSION::${XCODE_VERSION}"
     - name: run test with ${XCODE_VERSION}
-      run: DEVELOPER_DIR='/Applications/Xcode_${{ XCODE_VERSION }}.app/Contents/Developer' bundle exec fastlane test
+      run: DEVELOPER_DIR='/Applications/Xcode_${XCODE_VERSION}.app/Contents/Developer' bundle exec fastlane test
