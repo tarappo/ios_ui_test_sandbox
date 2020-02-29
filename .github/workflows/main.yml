@@ -4,10 +4,10 @@ on: [push]
 
 jobs:
   build:
+    runs-on: [macos-latest]
     strategy:
       matrix:
         xcode: [ '11.2.1', '11.3.1', 'latest' ]
-        os: [ macos-latest ]
     steps:
     - uses: actions/checkout@v2
     - name: Cache bundle directory
