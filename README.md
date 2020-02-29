@@ -5,7 +5,7 @@ XCUITestのサンプルコードです。
 |:------|:-----|
 |Bitrise（実行先がiOS13系）|[![Build Status](https://app.bitrise.io/app/4768174dfb44bcbb/status.svg?token=VUZUlTypplvt1Uau1p1MZQ&branch=master)](https://app.bitrise.io/app/4768174dfb44bcbb)|
 |Bitrise（実行先がiOS12系）|[![Build Status](https://app.bitrise.io/app/798fd9dd026dee05/status.svg?token=TjhWQIpaYrthT-Mb99ILDA)](https://app.bitrise.io/app/798fd9dd026dee05)|
-|GitHub Actions|[![Actions Status](https://github.com/tarappo/ios_ui_test_sandbox/workflows/CI/badge.svg)](https://github.com/tarappo/ios_ui_test_sandbox/actions)|
+|GitHub Actions|[![Actions Status](https://github.com/tarappo/ios_ui_test_sandbox/workflows/XCUITest/badge.svg)](https://github.com/tarappo/ios_ui_test_sandbox/actions)|
 
 
 ## 目的
