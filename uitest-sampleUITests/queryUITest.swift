@@ -34,7 +34,7 @@ class queryUITest: XCTestCase {
             XCTAssertEqual(totalCount, app.staticTexts.count, app.debugDescription)
         }else {
             let totalCount = view1labelCount + view2LabelCount
-            XCTAssertEqual(totalCount, app.staticTexts.count, app.debugDescription)
+            XCTAssertEqual(totalCount, app.otherElements["main_view_1"].descendants(matching: .staticText).count, app.debugDescription)
         }
     }
 
