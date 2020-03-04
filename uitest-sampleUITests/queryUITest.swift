@@ -12,7 +12,7 @@ import XCTest
 // 実際のUIテストの実装パターンとは異なる点に注意してください
 class queryUITest: XCTestCase {
     let app = XCUIApplication()
-    let view1labelCount = 4
+    let view1labelCount = 3
     let view2LabelCount = 2
     let buttonCount = 2
     let switchCount = 1
