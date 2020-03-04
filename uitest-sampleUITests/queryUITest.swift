@@ -26,7 +26,7 @@ class queryUITest: XCTestCase {
     override func tearDown() {
     }
 
-    // Xcode11以降、staticTextsをカウントするとButtonまでカウントされる
+    // iOS13系だとstaticTextsをカウントするとButtonまでカウントされる
     func testLabelCount() {
         let totalCount = labelCount + buttonCount
         XCTAssertEqual(totalCount, app.staticTexts.count)
