@@ -31,10 +31,10 @@ class queryUITest: XCTestCase {
         //MARK: iOS13系だとstaticTextsをカウントするとButtonまでカウントされる
         if #available(iOS 13.0, *) {
             let totalCount = view1labelCount + view2LabelCount + buttonCount
-            XCTAssertEqual(totalCount, app.staticTexts.count)
+            XCTAssertEqual(totalCount, app.staticTexts.count, app.debugDescription)
         }else {
             let totalCount = view1labelCount + view2LabelCount
-            XCTAssertEqual(totalCount, app.staticTexts.count)
+            XCTAssertEqual(totalCount, app.staticTexts.count, app.debugDescription)
         }
     }
 
