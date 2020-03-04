@@ -12,7 +12,8 @@ import XCTest
 // 実際のUIテストの実装パターンとは異なる点に注意してください
 class queryUITest: XCTestCase {
     let app = XCUIApplication()
-    let labelCount = 4
+    let view1labelCount = 4
+    let view2LabelCount = 2
     let buttonCount = 2
     let switchCount = 1
     let sliderCount = 1
@@ -29,10 +30,11 @@ class queryUITest: XCTestCase {
     func testLabelCount() {
         //MARK: iOS13系だとstaticTextsをカウントするとButtonまでカウントされる
         if #available(iOS 13.0, *) {
-            let totalCount = labelCount + buttonCount
+            let totalCount = view1labelCount + view2LabelCount + buttonCount
             XCTAssertEqual(totalCount, app.staticTexts.count)
         }else {
-            XCTAssertEqual(labelCount, app.staticTexts.count)
+            let totalCount = view1labelCount
+            XCTAssertEqual(totalCount, app.staticTexts.count)
         }
     }
 
