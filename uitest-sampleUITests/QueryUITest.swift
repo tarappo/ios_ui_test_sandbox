@@ -1,6 +1,5 @@
 //
-//  uitest_sampleUITests.swift
-//  uitest-sampleUITests
+//  QueryUITest
 //
 //  Created by thirata on 2020/02/19.
 //  Copyright © 2020 thirata. All rights reserved.
@@ -10,7 +9,7 @@ import XCTest
 
 // あくまでバージョン間の差異をチェックするためのコードです
 // 実際のUIテストの実装パターンとは異なる点に注意してください
-class queryUITest: XCTestCase {
+class QueryUITest: XCTestCase {
     let app = XCUIApplication()
     let view1labelCount = 3
     let view2LabelCount = 2
@@ -27,12 +26,14 @@ class queryUITest: XCTestCase {
     override func tearDown() {
     }
 
+    //MARK: - カウント
     func testLabelCount() {
         //MARK: iOS13系だとstaticTextsをカウントするとButtonまでカウントされる
         if #available(iOS 13.0, *) {
             let totalCount = view1labelCount + view2LabelCount + buttonCount
             XCTAssertEqual(totalCount, app.staticTexts.count, app.debugDescription)
         }else {
+        //MARK: iOS12の実機の場合、statusbarにある時刻の箇所がstaticTextとしてカウントされる
             let totalCount = view1labelCount + view2LabelCount
             XCTAssertEqual(totalCount, app.otherElements["main_view_1"].descendants(matching: .staticText).count, app.debugDescription)
         }
@@ -53,5 +54,4 @@ class queryUITest: XCTestCase {
     func testTextFieldCount() {
         XCTAssertEqual(textFieldCount, app.textFields.count)
     }
-        
 }
