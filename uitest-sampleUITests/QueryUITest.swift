@@ -54,4 +54,36 @@ class QueryUITest: XCTestCase {
     func testTextFieldCount() {
         XCTAssertEqual(textFieldCount, app.textFields.count)
     }
+    
+    //MARK: - Exists
+    func testLabelExists() {
+        let totalCount = view1labelCount + view2LabelCount
+        for no in 1...totalCount {
+            XCTAssertTrue(app.staticTexts["main_label_\(no)"].exists)
+        }
+    }
+
+    func testButtonExists() {
+        for no in 1...buttonCount {
+            XCTAssertTrue(app.buttons["main_button_\(no)"].exists)
+        }
+    }
+    
+    func testSwitchExists() {
+        for no in 1...switchCount {
+            XCTAssertTrue(app.switches["main_switch_\(no)"].exists)
+        }
+    }
+    
+    func testSliderExists() {
+        for no in 1...sliderCount {
+            XCTAssertTrue(app.sliders["main_slider_\(no)"].exists)
+        }
+    }
+    
+    func testTextFieldExists() {
+        for no in 1...textFieldCount {
+            XCTAssertTrue(app.textFields["main_textfield_\(no)"].exists)
+        }
+    }
 }
