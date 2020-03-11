@@ -86,4 +86,11 @@ class QueryUITest: XCTestCase {
             XCTAssertTrue(app.textFields["main_textfield_\(no)"].exists)
         }
     }
+    
+    //MARK: - Hittable
+    func testTextFieldHittable() {
+        for no in 1...textFieldCount {
+            XCTAssertTrue(app.textFields["main_textfield_\(no)"].isHittable)
+        }
+    }
 }
