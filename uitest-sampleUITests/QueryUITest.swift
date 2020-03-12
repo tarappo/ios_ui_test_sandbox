@@ -88,6 +88,19 @@ class QueryUITest: XCTestCase {
     }
     
     //MARK: - Hittable
+    func testLabelHittable() {
+        let totalCount = view1labelCount + view2LabelCount
+        for no in 1...totalCount {
+            XCTAssertTrue(app.staticTexts["main_label_\(no)"].isHittable)
+        }
+    }
+
+    func testButtonHittable() {
+        for no in 1...buttonCount {
+            XCTAssertTrue(app.buttons["main_button_\(no)"].isHittable)
+        }
+    }
+
     func testTextFieldHittable() {
         for no in 1...textFieldCount {
             XCTAssertTrue(app.textFields["main_textfield_\(no)"].isHittable)
