@@ -101,9 +101,22 @@ class QueryUITest: XCTestCase {
         }
     }
 
+    func testtSwitchHittable() {
+        for no in 1...switchCount {
+            XCTAssertTrue(app.switches["main_switch_\(no)"].isHittable)
+        }
+    }
+
     func testTextFieldHittable() {
         for no in 1...textFieldCount {
             XCTAssertTrue(app.textFields["main_textfield_\(no)"].isHittable)
+        }
+    }
+
+    //MARK: - false: isHittable
+    func testSliderHittable() {
+        for no in 1...sliderCount {
+            XCTAssertTrue(app.sliders["main_slider_\(no)"].isHittable)
         }
     }
 }
