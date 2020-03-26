@@ -13,6 +13,7 @@ import XCTest
 class ActionUITest: XCTestCase {
     let app = XCUIApplication()
     //TODO: actionは別UIに変更予定
+    let view1labelCount = 3
     var view2LabelCount = 2
     var buttonCount = 2
     var switchCount = 1
@@ -37,6 +38,14 @@ class ActionUITest: XCTestCase {
     func testTextFieldTap() {
         for no in 1...textFieldCount {
             app.textFields["main_textfield_\(no)"].tap()
+        }
+    }
+    
+    //MARK: typeText
+    func testTextFieldTypeText() {
+        for no in 1...textFieldCount {
+            app.textFields["main_textfield_\(no)"].tap()
+            app.textFields["main_textfield_\(no)"].typeText("test_\(no)")
         }
     }
 }
