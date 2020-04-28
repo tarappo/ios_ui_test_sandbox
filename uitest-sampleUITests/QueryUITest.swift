@@ -21,6 +21,7 @@ class QueryUITest: XCTestCase {
     override func setUp() {
         continueAfterFailure = false
         app.launch()
+        takeScreenshot(name: "アプリ起動")
     }
 
     override func tearDown() {
@@ -118,5 +119,15 @@ class QueryUITest: XCTestCase {
         for no in 1...sliderCount {
             XCTAssertTrue(app.sliders["main_slider_\(no)"].isHittable)
         }
+    }
+}
+
+extension XCTestCase {
+    func takeScreenshot(name: String) {
+        let screenshot = XCUIScreen.main.screenshot()
+        let attachment = XCTAttachment(screenshot: screenshot)
+        attachment.lifetime = .keepAlways
+        attachment.name = name
+        self.add(attachment)
     }
 }
