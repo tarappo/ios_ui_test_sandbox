@@ -7,7 +7,7 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        xcode: [ '11.6_beta', '11.4.1', 'latest' ]
+        xcode: [ '11.4.1', '11.5', 'latest' ]
         os: [ macOS-latest ]
     steps:
     - uses: actions/checkout@v2
