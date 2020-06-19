@@ -33,16 +33,20 @@ GitHub Actionsでは３種類のXcodeバージョンでマトリックスビル�
 
 指定した２種類のXcodeと、そのVM（macos-latestを指定）に入っている最新のXcodeを指定しています。
 
+GitHub Actionsの実行環境の情報
+
+ - https://github.com/actions/virtual-environments/blob/master/images/macos/macos-10.15-Readme.md
+
 ### Bitrise
 Bitriseでは、２種類のワークフローと２種類のアプリを用意して実行しています。
 実行パターンとしては次のとおりです。
 
 |Xcodeのバージョン|実行環境|
 |:-------|:------|
-|Xcode10.3     |iOS12系|
-|Xcode11.4     |iOS12系|
-|Xcode10.3     |iOS13系|
-|Xcode11.4     |iOS13系|
+|Xcode11.5     |iOS12系|
+|Xcode11.6(beta)     |iOS12系|
+|Xcode11.5     |iOS13系|
+|Xcode11.6(beta)     |iOS13系|
 
  
 
