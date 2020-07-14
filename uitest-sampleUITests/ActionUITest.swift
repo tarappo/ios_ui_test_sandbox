@@ -21,6 +21,9 @@ class ActionUITest: XCTestCase {
     var textFieldCount = 1
         
     override func setUp() {
+        app.launchEnvironment = [ "ENV1" : "VALUE1",
+                                  "ENV2" : "VALUE2" ]
+
         continueAfterFailure = false
         app.launch()
     }
