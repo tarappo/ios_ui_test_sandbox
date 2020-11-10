@@ -32,7 +32,7 @@ class QueryUITest: XCTestCase {
 
     //MARK: - カウント
     func testLabelCount() {
-        //MARK: iOS13系だとstaticTextsをカウントするとButtonまでカウントされる
+        //MARK: iOS13、14だとstaticTextsをカウントするとButtonまでカウントされる
         if #available(iOS 13.0, *) {
             let totalCount = label1Count + label2Count + label3Count + buttonCount
             XCTAssertEqual(totalCount, app.staticTexts.count, app.debugDescription)
