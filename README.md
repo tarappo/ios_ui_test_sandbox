@@ -3,8 +3,7 @@ XCUITestのサンプルコードです。
 
 |Service|Badge|
 |:------|:-----|
-|Bitrise（実行先がiOS13系）|[![Build Status](https://app.bitrise.io/app/4768174dfb44bcbb/status.svg?token=VUZUlTypplvt1Uau1p1MZQ&branch=master)](https://app.bitrise.io/app/4768174dfb44bcbb)|
-|Bitrise（実行先がiOS12系）|[![Build Status](https://app.bitrise.io/app/798fd9dd026dee05/status.svg?token=TjhWQIpaYrthT-Mb99ILDA)](https://app.bitrise.io/app/798fd9dd026dee05)|
+|Bitrise|[![Build Status](https://app.bitrise.io/app/4768174dfb44bcbb/status.svg?token=VUZUlTypplvt1Uau1p1MZQ&branch=master)](https://app.bitrise.io/app/4768174dfb44bcbb)|
 |GitHub Actions|[![Actions Status](https://github.com/tarappo/ios_ui_test_sandbox/workflows/XCUITest/badge.svg)](https://github.com/tarappo/ios_ui_test_sandbox/actions)|
 
 
@@ -41,13 +40,9 @@ GitHub Actionsの実行環境の情報
 Bitriseでは、２種類のワークフローと２種類のアプリを用意して実行しています。
 実行パターンとしては次のとおりです。
 
-|Xcodeのバージョン|実行環境|
-|:-------|:------|
-|Xcode11.5     |iOS12系|
-|Xcode11.6(beta)     |iOS12系|
-|Xcode11.5     |iOS13系|
-|Xcode11.6(beta)     |iOS13系|
-
+ - 最新：Xcode Edge with latest Xcode
+   - https://github.com/bitrise-io/bitrise.io/blob/master/system_reports/osx-xcode-edge.log
+ - メジャーバージョンの1つ手前（手動管理）
  
 
 
