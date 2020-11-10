@@ -36,7 +36,7 @@ jobs:
           export XCODE_APP="Xcode_${{ matrix.xcode }}.app"
         fi
         echo "set: ${XCODE_APP}"
-        echo "::set-env name=XCODE_VERSION::${XCODE_APP}"
+        echo "XCODE_VERSION=${XCODE_APP}" >> $GITHUB_ENV
     - name: run test with ${{ matrix.xcode }}
       run: |
         echo "set: ${XCODE_VERSION}"
