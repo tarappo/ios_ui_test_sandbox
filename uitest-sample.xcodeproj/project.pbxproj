@@ -58,13 +58,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		73BA590C2414AEB3007C050B /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Helpers;
-			sourceTree = "<group>";
-		};
 		7D405F7023FD2B0A0049E641 = {
 			isa = PBXGroup;
 			children = (
@@ -99,7 +92,6 @@
 		7D405F9223FD2B0C0049E641 /* uitest-sampleUITests */ = {
 			isa = PBXGroup;
 			children = (
-				73BA590C2414AEB3007C050B /* Helpers */,
 				7D405F9323FD2B0C0049E641 /* QueryUITest.swift */,
 				73BA590A2409D45C007C050B /* ActionUITest.swift */,
 				7D405F9523FD2B0C0049E641 /* Info.plist */,
