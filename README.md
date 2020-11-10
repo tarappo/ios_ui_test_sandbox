@@ -20,21 +20,21 @@ Xcodeのバージョンによる挙動の違いをすぐに確認できるよう
 
 |CIサービス|Xcodeのバージョン|実行環境|
 |:-------|:------|:------|
-|GitHub Actions|Xcodeのバージョン3種類（指定２種類、最新１種類）|iOSシミュレーター（そのXcodeの最新）|
-|Bitrise|Xcodeのバージョン２種類|iOS実機（Firebase Test Lab）でOSバージョン2種類（最新と１つ前のOSバージョン）|
+|GitHub Actions|Xcodeのバージョン２種類（指定１種類、最新１種類）|iOSシミュレーター（そのXcodeの最新）|
+|Bitrise|Xcodeのバージョン２種類|iOS実機（Firebase Test Lab）でOSバージョン２種類（最新と１つ前のOSバージョン）|
 
 
 ### GitHub Actions
-GitHub Actionsでは３種類のXcodeバージョンでマトリックスビルドをしています。
+GitHub Actionsでは２種類のXcodeバージョンでマトリックスビルドをしています。
 実行結果は次のような感じです。
 
 ![CIの実行例](./doc/image/github_actions.png "実行例")
 
-指定した２種類のXcodeと、そのVM（macos-latestを指定）に入っている最新のXcodeを指定しています。
+指定した１種類のXcodeと、そのVM（macos-latestを指定）に入っている最新のXcodeを指定しています。
 
 GitHub Actionsの実行環境の情報
 
- - https://github.com/actions/virtual-environments/blob/master/images/macos/macos-10.15-Readme.md
+ - https://github.com/actions/virtual-environments/tree/main/images/macos
 
 ### Bitrise
 Bitriseでは、２種類のワークフローと２種類のアプリを用意して実行しています。
