@@ -46,15 +46,21 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" identifier="main_button_1"/>
                                 <state key="normal" title="Button1"/>
+                                <connections>
+                                    <action selector="tapButton1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cMo-SX-d63"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OhG-tr-Nge">
                                 <rect key="frame" x="181" y="294" width="55" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" identifier="main_button_2"/>
                                 <state key="normal" title="Button2"/>
+                                <connections>
+                                    <action selector="tapButton2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="67k-gH-th2"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6pC-Pi-gD2">
-                                <rect key="frame" x="160" y="359" width="97" height="34"/>
+                                <rect key="frame" x="67" y="359" width="97" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" identifier="main_textfield_1"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -102,11 +108,21 @@
                                 <color key="backgroundColor" systemColor="systemYellowColor"/>
                                 <accessibility key="accessibilityConfiguration" identifier="main_view_2"/>
                             </view>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="C39-jJ-lZK">
+                                <rect key="frame" x="257" y="359" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <accessibility key="accessibilityConfiguration" identifier="main_securetextfield_1"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <accessibility key="accessibilityConfiguration" identifier="main_view_1"/>
                     </view>
+                    <connections>
+                        <outlet property="textField1" destination="6pC-Pi-gD2" id="GnC-aL-B6P"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

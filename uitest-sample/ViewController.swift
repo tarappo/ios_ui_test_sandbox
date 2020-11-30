@@ -9,12 +9,21 @@
 import UIKit
 
 class ViewController: UIViewController {
+    var tapCount = 0
+    @IBOutlet weak var textField1: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 
+    @IBAction func tapButton1(_ sender: UIButton) {
+        tapCount += 1
+        textField1.text = "tap: \(tapCount)"
+    }
 
+    @IBAction func tapButton2(_ sender: UIButton) {
+        tapCount = 0
+        textField1.text = ""
+    }
 }
 

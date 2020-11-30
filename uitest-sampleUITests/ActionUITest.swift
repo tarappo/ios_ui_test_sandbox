@@ -19,6 +19,8 @@ class ActionUITest: XCTestCase {
     var switchCount = 1
     var sliderCount = 1
     var textFieldCount = 1
+    let secureTextFieldCount = 1
+    
         
     override func setUp() {
         app.launchEnvironment = [ "ENV1" : "VALUE1",
@@ -49,6 +51,13 @@ class ActionUITest: XCTestCase {
         for no in 1...textFieldCount {
             app.textFields["main_textfield_\(no)"].tap()
             app.textFields["main_textfield_\(no)"].typeText("test_\(no)")
+        }
+    }
+
+    func testSecureTextFieldTypeText() {
+        for no in 1...secureTextFieldCount {
+            app.secureTextFields["main_securetextfield_\(no)"].tap()
+            app.secureTextFields["main_securetextfield_\(no)"].typeText("test_\(no)")
         }
     }
 }

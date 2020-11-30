@@ -18,6 +18,7 @@ class QueryUITest: XCTestCase {
     let switchCount = 1
     let sliderCount = 1
     let textFieldCount = 1
+    let secureTextFieldCount = 1
     let view1Count = 1
     let view2Count = 1
     
@@ -58,6 +59,10 @@ class QueryUITest: XCTestCase {
     func testTextFieldCount() {
         XCTAssertEqual(textFieldCount, app.textFields.count)
     }
+
+    func testSecureTextFieldCount() {
+        XCTAssertEqual(secureTextFieldCount, app.secureTextFields.count)
+    }
     
     //MARK: - Exists
     func testLabelExists() {
@@ -96,6 +101,12 @@ class QueryUITest: XCTestCase {
         }
     }
 
+    func testSecureTextFieldExists() {
+        for no in 1...secureTextFieldCount {
+        XCTAssertTrue(app.secureTextFields["main_securetextfield_\(no)"].exists)
+        }
+    }
+
     func testViewExists() {
         let viewCount = view1Count + view2Count
         for no in 1...viewCount {
@@ -131,6 +142,12 @@ class QueryUITest: XCTestCase {
     func testTextFieldHittable() {
         for no in 1...textFieldCount {
             XCTAssertTrue(app.textFields["main_textfield_\(no)"].isHittable)
+        }
+    }
+
+    func testSecureTextFieldHittable() {
+        for no in 1...secureTextFieldCount {
+            XCTAssertTrue(app.secureTextFields["main_securetextfield_\(no)"].isHittable)
         }
     }
 
