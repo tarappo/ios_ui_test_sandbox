@@ -21,7 +21,7 @@ Xcodeのバージョンによる挙動の違いをすぐに確認できるよう
 |CIサービス|Xcodeのバージョン|実行環境|
 |:-------|:------|:------|
 |GitHub Actions|Xcodeのバージョン２種類（指定１種類、最新１種類）|iOSシミュレーター（そのXcodeの最新）|
-|Bitrise|Xcodeのバージョン２種類|iOS実機（Firebase Test Lab）でOSバージョン２種類（最新と１つ前のOSバージョン）|
+|Bitrise|Xcodeのバージョン２種類|iOS実機（Firebase Test Lab）でOSバージョン２種類（最新（Latest）と１つ前のOSバージョン）|
 
 
 ### GitHub Actions
@@ -44,7 +44,6 @@ Bitriseでは、２種類のワークフローと２種類のアプリを用意�
    - https://github.com/bitrise-io/bitrise.io/blob/master/system_reports/osx-xcode-edge.log
  - メジャーバージョンの1つ手前（手動管理）
  
-
 
 
 
