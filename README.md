@@ -3,7 +3,8 @@ XCUITestのサンプルコードです。
 
 |Service|Badge|
 |:------|:-----|
-|Bitrise|[![Build Status](https://app.bitrise.io/app/4768174dfb44bcbb/status.svg?token=VUZUlTypplvt1Uau1p1MZQ&branch=master)](https://app.bitrise.io/app/4768174dfb44bcbb)|
+|Bitrise（最新バージョン）|[![Build Status](https://app.bitrise.io/app/4768174dfb44bcbb/status.svg?token=VUZUlTypplvt1Uau1p1MZQ&branch=master)](https://app.bitrise.io/app/4768174dfb44bcbb)|
+|Bitrise（最新の１つ前）|[![Build Status](https://app.bitrise.io/app/1d858c8431aa217d/status.svg?token=GTEOmJjTXqa35KkrFfOXaA)](https://app.bitrise.io/app/1d858c8431aa217d)|
 |GitHub Actions|[![Actions Status](https://github.com/tarappo/ios_ui_test_sandbox/workflows/XCUITest/badge.svg)](https://github.com/tarappo/ios_ui_test_sandbox/actions)|
 
 
@@ -21,7 +22,7 @@ Xcodeのバージョンによる挙動の違いをすぐに確認できるよう
 |CIサービス|Xcodeのバージョン|実行環境|
 |:-------|:------|:------|
 |GitHub Actions|Xcodeのバージョン２種類（指定１種類、最新１種類）|iOSシミュレーター（そのXcodeの最新）|
-|Bitrise|Xcodeのバージョン２種類|iOS実機（Firebase Test Lab）でOSバージョン２種類（最新（Latest）と１つ前のOSバージョン）|
+|Bitrise|Xcodeのバージョン２種類（指定１種類、最新１種類）|iOS実機（Firebase Test Lab）でOSバージョン２種類（最新（Latest）と１つ前のOSバージョン）|
 
 
 ### GitHub Actions
@@ -37,7 +38,7 @@ GitHub Actionsの実行環境の情報
  - https://github.com/actions/virtual-environments/tree/main/images/macos
 
 ### Bitrise
-Bitriseでは、２種類のワークフローと２種類のアプリを用意して実行しています。
+Bitriseでは、２種類のアプリを用意しそれぞれでFirebase Test Labでテストを実行しています。
 実行パターンとしては次のとおりです。
 
  - 最新：Xcode Edge with latest Xcode
