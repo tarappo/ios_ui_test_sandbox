@@ -3,10 +3,10 @@ name: XCUITest
 on:
   push:
     branches:
-      - master
+      - main
   pull_request:
     branches:
-      - master
+      - main
   schedule:
     - cron:  '0 8 */4 * *'
 
@@ -16,8 +16,8 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        xcode: [ '11.7', 'latest' ]
-        os: [ macOS-latest ]
+        xcode: [ '14.1', 'latest' ]
+        os: [ macos-latest ]
     steps:
     - uses: actions/checkout@v3
     - name: Cache bundle directory
