@@ -1,0 +1,30 @@
+{
+  "configurations" : [
+    {
+      "id" : "A33BD3D2-BDC8-4B75-B345-A276291887F1",
+      "name" : "Configuration",
+      "options" : {
+        "uiTestingScreenshotsLifetime" : "keepAlways",
+        "userAttachmentLifetime" : "keepAlways"
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : false,
+    "targetForVariableExpansion" : {
+      "containerPath" : "container:uitest-sample.xcodeproj",
+      "identifier" : "7D405F7823FD2B0A0049E641",
+      "name" : "uitest-sample"
+    }
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:uitest-sample.xcodeproj",
+        "identifier" : "7D405F8E23FD2B0C0049E641",
+        "name" : "uitest-sampleUITests"
+      }
+    }
+  ],
+  "version" : 1
+}
