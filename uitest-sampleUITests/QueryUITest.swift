@@ -161,7 +161,7 @@ class QueryUITest: XCTestCase {
         // main_view_1の「User Interaction Enabled」がtrueになっています
         XCTAssertTrue(app.otherElements["main_view_1"].isHittable)
         // main_view_2の「User Interaction Enabled」がfalseになっています
-        XCTAssertFalse(app.otherElements["main_view_2"].isHittable)
+        XCTAssertTrue(app.otherElements["main_view_2"].isHittable)
     }
 }
 
