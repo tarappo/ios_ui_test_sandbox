@@ -1,0 +1,10 @@
+appId: "com.tarappo.uitest-sample"
+
+---
+- launchApp
+- tapOn:
+    id: "main_slider_1"
+- tapOn:
+    id: "main_switch_1"
+- tapOn: "Button1"
+- assertVisible: "tap: 1"
