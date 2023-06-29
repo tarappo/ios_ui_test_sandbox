@@ -33,4 +33,5 @@ jobs:
         curl -Ls "https://get.maestro.mobile.dev" | bash
     - name: run maestro
       run: |
+        export PATH="$PATH":"$HOME/.maestro/bin"
         maestro test ios_sample_flow.yaml
