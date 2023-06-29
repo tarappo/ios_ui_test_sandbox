@@ -1,4 +1,4 @@
-name: XCUITest
+name: maestro
 
 on:
   push:
