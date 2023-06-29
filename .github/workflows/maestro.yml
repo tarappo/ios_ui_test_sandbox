@@ -27,9 +27,7 @@ jobs:
         bundle install --jobs 4 --retry 3
     - name: build simulator app and install
       run: |
-        bundle exec fastlane build_sym
-        xcrun simctl boot
-        xcrun simctl install booted build_output/Build/Products/Debug-iphonesimulator/uitest-sample.app
+        bundle exec fastlane test
     - name: setup maestro
       run: |
         curl -Ls "https://get.maestro.mobile.dev" | bash
