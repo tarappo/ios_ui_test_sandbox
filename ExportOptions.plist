@@ -7,7 +7,7 @@
 	<key>manageAppVersionAndBuildNumber</key>
 	<true/>
 	<key>method</key>
-	<string>app-store-connect</string>
+	<string>debugging</string>
 	<key>provisioningProfiles</key>
 	<dict>
 		<key>com.tarappo.uitest</key>
