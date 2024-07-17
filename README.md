@@ -2,7 +2,7 @@
 
 |Service|Badge|
 |:------|:-----|
-|Bitrise（Xcode15.4）|[![Build Status](https://app.bitrise.io/app/1d858c8431aa217d/status.svg?token=GTEOmJjTXqa35KkrFfOXaA&branch=main)](https://app.bitrise.io/app/1d858c8431aa217d)|
+|Bitrise（Xcode15.4）|[![Build Status](https://app.bitrise.io/app/1d858c8431aa217d/status.svg?token=GTEOmJjTXqa35KkrFfOXaA)](https://app.bitrise.io/app/1d858c8431aa217d)
 |GitHub Actions|[![Actions Status](https://github.com/tarappo/ios_ui_test_sandbox/actions/workflows/main.yml/badge.svg)](https://github.com/tarappo/ios_ui_test_sandbox/actions)|
 
 ## 目的
