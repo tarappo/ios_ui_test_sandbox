@@ -1,16 +1,17 @@
-# XCUITestのサンプルコード
-XCUITestのサンプルコードです。
+# XCTest（UI Test）のサンプルコード
 
 |Service|Badge|
 |:------|:-----|
-|Bitrise（最新バージョン）|[![Build Status](https://app.bitrise.io/app/4768174dfb44bcbb/status.svg?token=VUZUlTypplvt1Uau1p1MZQ&branch=master)](https://app.bitrise.io/app/4768174dfb44bcbb)|
-|Bitrise（最新の１つ前）|[![Build Status](https://app.bitrise.io/app/1d858c8431aa217d/status.svg?token=GTEOmJjTXqa35KkrFfOXaA)](https://app.bitrise.io/app/1d858c8431aa217d)|
-|GitHub Actions|[![Actions Status](https://github.com/tarappo/ios_ui_test_sandbox/workflows/XCUITest/badge.svg)](https://github.com/tarappo/ios_ui_test_sandbox/actions)|
-
+|Bitrise（Xcode15.4）|[![Build Status](https://app.bitrise.io/app/1d858c8431aa217d/status.svg?token=GTEOmJjTXqa35KkrFfOXaA&branch=main)](https://app.bitrise.io/app/1d858c8431aa217d)|
+|GitHub Actions|[![Actions Status](https://github.com/tarappo/ios_ui_test_sandbox/actions/workflows/main.yml/badge.svg)](https://github.com/tarappo/ios_ui_test_sandbox/actions)|
 
 ## 目的
-Xcodeのバージョンによる挙動の違いをすぐに確認できるように用意しています。
-複雑なことは一切せず、基本となるAPIの動作確認をおこなっています。
+XCTest（UI Test）のAPIの挙動として次を確認するためのサンプルコードです。
+
+ - APIがどういった動作をするか
+ - APIが実機とシミュレーターともに動くか、動かないかの確認
+
+あくまでサンプルコードなので複雑なことはおこなっておらず、あくまでもAPIの網羅性や実機とシュミレーターの差異の確認を主軸としています。
 
 
 ## 実行環境
@@ -22,7 +23,7 @@ Xcodeのバージョンによる挙動の違いをすぐに確認できるよう
 |CIサービス|Xcodeのバージョン|実行環境|
 |:-------|:------|:------|
 |GitHub Actions|Xcodeのバージョン２種類（指定１種類、最新１種類）|iOSシミュレーター（そのXcodeの最新）|
-|Bitrise|Xcodeのバージョン２種類（指定１種類、最新１種類）|iOS実機（Firebase Test Lab）でOSバージョン２種類（最新（Latest）と１つ前のOSバージョン）|
+|Bitrise|Xcodeのバージョン1種類（指定１種類）|iOS実機（Firebase Test Lab）でOSバージョン２種類|
 
 
 ### GitHub Actions
@@ -36,15 +37,4 @@ GitHub Actionsでは２種類のXcodeバージョンでマトリックスビル�
 GitHub Actionsの実行環境の情報
 
  - https://github.com/actions/virtual-environments/tree/main/images/macos
-
-### Bitrise
-Bitriseでは、２種類のアプリを用意しそれぞれでFirebase Test Labでテストを実行しています。
-実行パターンとしては次のとおりです。
-
- - 最新：Xcode Edge with latest Xcode
-   - https://github.com/bitrise-io/bitrise.io/blob/master/system_reports/osx-xcode-edge.log
- - メジャーバージョンの1つ手前（手動管理）
- 
-
-
 
