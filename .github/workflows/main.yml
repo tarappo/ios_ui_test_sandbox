@@ -10,12 +10,12 @@ on:
   schedule:
     - cron:  '0 8 */4 * *'
 
-
 jobs:
   build:
     runs-on: ${{ matrix.os }}
     timeout-minutes: 40
     strategy:
+      fail-fast: false
       matrix:
         xcode: [ '15.1', 'latest' ]
         os: [ macos-latest ]
@@ -28,13 +28,16 @@ jobs:
     - name: set Xcode Version ${{ matrix.xcode }}
       run: |
         if [ "${{ matrix.xcode }}" = 'latest' ]; then
-          export XCODE_BETA_APP=`ls /Applications/ | grep Xcode_ | awk 'match($0, /.*beta.*/) {print substr($0, RSTART, RLENGTH-9)}' | sort -n | tail -1`
+          # beta版があるかのチェック
+          export XCODE_BETA_APP=`ls /Applications/ | grep Xcode_ | awk 'match($0, /.*beta.*/) {print substr($0, RSTART, RLENGTH)}' | sort -n | tail -1`
 
+          # XCODE_APP変数へのセット
           if [ "${XCODE_BETA_APP}" = "" ]; then
             export XCODE_APP=`ls /Applications/ | grep Xcode_ | awk '$0 ~ /.*\.app/' | sort -n | tail -1`
           else
-            export XCODE_APP="${XCODE_BETA_APP}_beta.app"
+            export XCODE_APP="${XCODE_BETA_APP}"
           fi
+
         else
           export XCODE_APP="Xcode_${{ matrix.xcode }}.app"
         fi
