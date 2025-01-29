@@ -20,7 +20,7 @@ platform :ios do
   desc "run test"
   lane :test do
     scan(
-      device: "iPhone 14"
+      device: "iPhone 15"
     )
   end
 
