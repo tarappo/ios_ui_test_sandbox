@@ -19,9 +19,7 @@ platform :ios do
 
   desc "run test"
   lane :test do
-    scan(
-      device: "iPhone 15 Pro"
-    )
+    run_tests
   end
 
   lane :build_sym do
