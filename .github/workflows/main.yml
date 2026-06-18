@@ -20,7 +20,7 @@ jobs:
         xcode: [ '15.4', 'latest' ]
         os: [ macos-latest ]
     steps:
-    - uses: actions/checkout@v4
+    - uses: actions/checkout@v7
     - name: bundler
       run: |
         bundle config path vendor/bundle
